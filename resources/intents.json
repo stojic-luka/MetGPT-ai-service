@@ -1,0 +1,53 @@
+{
+  "intents": [
+    {
+      "tag": "time",
+      "patterns": [
+        "vreme",
+        "koje je vreme",
+        "da li možeš da mi kažeš vreme",
+        "trenutno vreme",
+        "možeš li da mi kažeš koje je vreme sad",
+        "koliko je sati sada",
+        "koliko ima sati",
+        "sati"
+      ],
+      "function": "tell_time"
+    },
+    {
+      "tag": "date",
+      "patterns": [
+        "datum",
+        "koji je datum",
+        "da li možeš da mi kažeš datum",
+        "datum danas",
+        "današnji datum",
+        "možeš li da mi kažeš koji je datum danas",
+        "dan",
+        "koji je dan",
+        "da li možeš da mi kažeš dan",
+        "dan danas",
+        "današnji dan"
+      ],
+      "function": "tell_date"
+    },
+    {
+      "tag": "weather",
+      "patterns": [
+        "prognoza",
+        "kakvo je vreme sad",
+        "koja je prognoza sad",
+        "kakva je trenutna prognoza",
+        "kakva je vremenska prognoza",
+        "koja je vremenska prognoza",
+        "vremenska prognoza"
+      ],
+      "function": "tell_weather"
+    },
+    {
+      "tag": "instagram",
+      "patterns": [""],
+      "function": "post_instagram"
+    }
+  ]
+}
