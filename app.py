@@ -15,12 +15,13 @@ chat_bot = ChatBot()
 @app.route('/chat', methods=['POST'])
 def chat():
     json_data = request.get_json()
+    print(json_data)
     return chat_bot.get_response_function(json_data["input"])
 
 @app.route('/train', methods=['GET'])
 def train():
     ModelTrainer().train_model()
-    return jsonify({'response': "Training model"})
+    return jsonify({"response": "Trained model"})
 
 
 if __name__ == '__main__':
