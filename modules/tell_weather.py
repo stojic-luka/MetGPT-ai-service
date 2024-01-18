@@ -3,7 +3,8 @@ import requests
 class TellWeather():
     def __init__(self):
         api_key = "4ada04c83a698d58b93d04f507b3097f"
-        location = requests.get("https://ipinfo.io/loc").text.strip().split(',')
+        # location = requests.get("https://ipinfo.io/loc").text.strip().split(',')
+        location = ["43.316650302627096", "21.89579354629841"]
         open_weather_url = f"https://api.openweathermap.org/data/2.5/weather?units=metric&lat={location[0]}&lon={location[1]}&appid={api_key}"
         self.weather_data = requests.get(open_weather_url).json()
 

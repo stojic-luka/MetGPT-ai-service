@@ -15,6 +15,19 @@ class ModuleManager():
                 self.modules[filename[:-3]] = getattr(module, "setup")()
 
     def run_from_module(self, module_name):
+        """
+        Run a module by its name from preloaded modules.
+
+        Args:
+            module_name (str): The name of the module to be run.
+
+        Raises:
+            ValueError: If the specified module is not available.
+
+        Returns:
+            The output of the module's run method.
+        """
+
         if module_name not in self.modules:
             raise ValueError(f"Module {module_name} not available.")
 

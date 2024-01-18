@@ -14,6 +14,16 @@ chat_bot = ChatBot()
 
 @app.route('/chat', methods=['POST'])
 def chat():
+    """
+    Endpoint for getting AI response.
+
+    Params:
+        None
+
+    Returns:
+        str: The response from the chat bot.
+    """
+
     json_data = request.get_json()
     print(json_data)
     return chat_bot.get_response_function(json_data["input"])

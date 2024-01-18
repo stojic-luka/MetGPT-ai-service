@@ -13,4 +13,4 @@ class TellDate():
         return f"{random.choice(self.responses)} {self.date_string}"
 
 def setup():
-    return TellDate() 
+    return TellDate()
